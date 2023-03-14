@@ -80,7 +80,7 @@ def isoterme(fluidname):
 
    
     
-def grafico_PH(P,H,color,number,fluidname):
+def grafico_PH(P,H,color,number,fluidname,xlim=[250, 410],ylim=[0, 15]):
     plt.figure(dpi=200)
     curva_limitePH(fluidname)
     isoentropiche(fluidname)
@@ -104,8 +104,8 @@ def grafico_PH(P,H,color,number,fluidname):
     plt.ylabel("P [bar]")
     plt.title('Diagramma P-H')
     plt.grid()
-    plt.xlim([250, 410])
-    plt.ylim([0, 15])
+    plt.xlim(xlim)
+    plt.ylim(ylim)
     
     
  

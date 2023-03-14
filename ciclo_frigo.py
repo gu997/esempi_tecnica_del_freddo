@@ -33,13 +33,17 @@ T_ref=273.15
 T_cond=40 #°C
 T_eva=0   #°C
 eta_comp=0.8
+dT_surr=5
 
 "Punto 0:"
-T[0]=T_eva + T_ref
+T_sat=T_eva + T_ref
 
-fluid.update(CP.QT_INPUTS, 1, T[0])
-
+fluid.update(CP.QT_INPUTS, 1, T_sat)
 P[0]=fluid.p()
+
+T[0]=T_eva + T_ref +dT_surr
+
+fluid.update(CP.PT_INPUTS, P[0], T[0])
 H[0]=fluid.hmass()
 S[0]=fluid.smass()
 
@@ -78,11 +82,10 @@ S[1]=fluid.smass()
 "grafico:"
 P=P*10**-5
 H=H*10**-3
-# =============================================================================
-# 
-# plt.plot(H,P,'r')
-# plt.plot((H[3],H[0]),(P[3],P[0]),'r')
-# 
-# =============================================================================
+
+#plt.figure(dpi=200)
+plt.plot(H,P,'r')
+plt.plot((H[3],H[0]),(P[3],P[0]),'r')
+
 
 gr.grafico_PH(P,H,'red',1,fluidname)

@@ -1,9 +1,11 @@
 import CoolProp.CoolProp as CP
 
 lib="HEOS"
-lib="REFPROP"
+#lib="REFPROP"
 
 fluidname= "CO2"
+#fluidname= "Helium"
+
 
 fluid   = CP.AbstractState(lib, fluidname )
 
@@ -21,3 +23,14 @@ fluid.hmass()
 fluid.smass()
 
 
+'esempio:'
+#lib="HEOS"
+lib="REFPROP"
+
+fluidname= "R1233ZD(E)"
+
+fluid   = CP.AbstractState(lib, fluidname )
+
+T=30
+fluid.update(CP.QT_INPUTS, 0, T+273.15)
+fluid.p()
