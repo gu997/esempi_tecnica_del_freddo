@@ -90,7 +90,7 @@ if __name__=='__main__':
     P=P*10**-5
     H=H*10**-3
     
-    #plt.figure(dpi=200)
+    plt.figure(dpi=200)
     plt.plot(H,P,'r')
     plt.plot((H[3],H[0]),(P[3],P[0]),'r')
     

@@ -30,7 +30,7 @@ H[0]=PropsSI('H','T',T[0],'Q',1,'CO2')
 T[1]=T[0] + eps*(T[3]-T[0])
 P[1]=P[0]
 H[1]=PropsSI('H','T',T[1],'P',P[1],'CO2')
-m[1]=c.Portata(T[0], T[1], P[3])
+#m[1]=c.Portata(T[0], T[1], P[3])
 
 H[4]=H[3]-H[1]+H[0]
 P[4]=P[3]

@@ -36,8 +36,8 @@ for i in range(n):
 plt.figure(dpi=200)
 
 plt.plot(T_cond_list,cop)
-plt.xlabel("$ P_{gc} $ [bar]")
+plt.xlabel("$ T_{bt_{cond}} $ [bar]")
 plt.ylabel("COP []")
-plt.title('Curva ottimo $ P_{gc} $ ')
+plt.title('Curva ottimo $ T_{bt_{cond}}  $ ')
 plt.grid()
 plt.show()      

@@ -85,7 +85,7 @@ H=H*10**-3
 
 #plt.figure(dpi=200)
 plt.plot(H,P,'r')
-plt.plot((H[3],H[0]),(P[3],P[0]),'r')
+plt.plot((H[-1],H[0]),(P[-1],P[0]),'r')
 
 
 gr.grafico_PH(P,H,'red',1,fluidname)
